@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Savanna Design Tokens */
+  --color-brand: #C17D2F;
+  --color-brand-dim: #A66A22;
+  --color-brand-light: #FDF3E3;
+  --color-brand-lighter: #FEF9F0;
+  --color-accent-text: #7A4E18;
+  --color-bg: #FAF8F4;
+  --color-bg-card: #FFFFFF;
+  --color-text-primary: #1C1A17;
+  --color-text-muted: #6B6560;
+  --color-text-faint: #A8A49E;
+  --color-border-default: #EAE7E1;
+  --color-border-strong: #D6D1CA;
+  --color-pill: #F5ECD8;
+  --color-pill-text: #7A4E18;
+
+  /* Status Colors */
+  --color-status-green: #16A34A;
+  --color-status-green-bg: #DCFCE7;
+  --color-status-amber: #D97706;
+  --color-status-amber-bg: #FEF3C7;
+  --color-status-red: #DC2626;
+  --color-status-red-bg: #FEE2E2;
+  --color-status-grey: #71717A;
+  --color-status-grey-bg: #F4F4F5;
+
+  /* Fonts */
+  --font-sora: var(--font-sora-family);
+  --font-dm: var(--font-dm-sans-family);
+}
+
+:root {
+  --background: #FAF8F4;
+  --foreground: #1C1A17;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm), 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar { display: none; }
+html { scrollbar-width: none; }
+
+/* ─── ANIMATIONS ──────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.2s ease-out; }
+.stagger-1 { animation: fadeIn 0.2s ease-out 0.05s both; }
+.stagger-2 { animation: fadeIn 0.2s ease-out 0.10s both; }
+.stagger-3 { animation: fadeIn 0.2s ease-out 0.14s both; }
+.stagger-4 { animation: fadeIn 0.2s ease-out 0.20s both; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.slide-up { animation: slideUp 0.28s cubic-bezier(0.34, 1.2, 0.64, 1); }
+
+@keyframes ticketIn {
+  from { opacity: 0; transform: scale(0.92) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.ticket-enter { animation: ticketIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.pulse { animation: pulse 2s ease-in-out infinite; }
+
+@keyframes urgentPulse {
+  0%, 100% { color: #DC2626; }
+  50% { color: #ff8080; }
+}
+.urgent-pulse { animation: urgentPulse 1s ease-in-out infinite; }
