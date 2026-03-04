@@ -41,7 +41,7 @@ export default function LoginPage() {
     const canSubmit = emailValid && password.length >= 6;
 
     return (
-        <div className="slide-up min-h-screen px-5 pt-5 pb-8 overflow-y-auto" style={{ background: "#FAF8F4" }}>
+        <div className="slide-up min-h-screen px-[18px] pt-5 pb-8 overflow-y-auto" style={{ background: "#FAF8F4" }}>
             {/* Header */}
             <div className="mb-8 pt-3">
                 <div className="w-[42px] h-[42px] bg-brand rounded-[12px] flex items-center justify-center mb-5">
@@ -53,7 +53,7 @@ export default function LoginPage() {
 
             {/* Google */}
             <div className="mb-5">
-                <button className="w-full py-[13px] bg-bg-card border-[1.5px] border-border-default rounded-[13px] font-dm text-[14px] font-medium cursor-pointer transition-all duration-150 hover:border-border-strong hover:shadow-[0_2px_8px_rgba(0,0,0,0.07)] flex items-center justify-center gap-[10px]" style={{ color: "#1C1A17" }}>
+                <button className="w-full py-[13px] rounded-[13px] font-dm text-[14px] font-medium cursor-pointer transition-all duration-150 hover:shadow-[0_2px_8px_rgba(0,0,0,0.07)] flex items-center justify-center gap-[10px]" style={{ color: "#1C1A17", background: "#FFFFFF", border: "1.5px solid #EAE7E1" }}>
                     <GoogleIcon />
                     Continue with Google
                 </button>
@@ -89,8 +89,8 @@ export default function LoginPage() {
 
             {/* Submit */}
             <button disabled={!canSubmit} onClick={() => router.push("/success")}
-                className="w-full py-[14px] bg-brand text-white rounded-[13px] font-dm text-[15px] font-semibold cursor-pointer transition-all hover:bg-brand-dim active:scale-[0.99] disabled:opacity-45 disabled:cursor-not-allowed disabled:shadow-none"
-                style={{ boxShadow: canSubmit ? "0 6px 20px rgba(193,125,47,0.32)" : "none" }}>
+                className="w-full py-[14px] text-white rounded-[13px] font-dm text-[15px] font-semibold cursor-pointer transition-all hover:opacity-90 active:opacity-100 disabled:opacity-45 disabled:cursor-not-allowed disabled:shadow-none"
+                style={{ background: "#C17D2F", boxShadow: canSubmit ? "0 6px 20px rgba(193,125,47,0.32)" : "none" }}>
                 Log in →
             </button>
 

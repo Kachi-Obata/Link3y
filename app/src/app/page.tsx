@@ -57,7 +57,7 @@ export default function SplashPage() {
       }} />
 
       {/* Content */}
-      <div className="flex-1 px-6 pt-[60px] pb-8 flex flex-col relative">
+      <div className="flex-1 px-[18px] pt-[60px] pb-8 flex flex-col relative">
         {/* Logo mark */}
         <div className="mb-12">
           <div className="w-[52px] h-[52px] bg-brand rounded-[16px] flex items-center justify-center"
@@ -85,7 +85,7 @@ export default function SplashPage() {
             { icon: "📍", text: "On campus" },
             { icon: "🔒", text: "Babcock only" },
           ].map(chip => (
-            <div key={chip.text} className="flex items-center gap-[6px] bg-bg-card border border-border-default rounded-full px-3 py-[6px] text-[12px] font-medium" style={{ color: "#6B6560" }}>
+            <div key={chip.text} className="flex items-center gap-[6px] rounded-full px-3 py-[6px] text-[12px] font-medium" style={{ background: "#F5ECD8", color: "#7A4E18" }}>
               <span className="text-[13px]">{chip.icon}</span>
               {chip.text}
             </div>
@@ -94,10 +94,10 @@ export default function SplashPage() {
 
         {/* CTAs */}
         <div className="flex flex-col gap-[10px]">
-          <Link href="/signup" className="w-full py-[14px] bg-brand text-white border-none rounded-[13px] font-dm text-[15px] font-semibold text-center cursor-pointer transition-all duration-150 hover:bg-brand-dim active:scale-[0.99]" style={{ boxShadow: "0 6px 20px rgba(193,125,47,0.32)" }}>
+          <Link href="/signup" className="w-full py-[14px] text-white border-none rounded-[13px] font-dm text-[15px] font-semibold text-center cursor-pointer transition-all duration-150 hover:opacity-90 active:opacity-100" style={{ background: "#C17D2F", boxShadow: "0 6px 20px rgba(193,125,47,0.32)" }}>
             Get started →
           </Link>
-          <Link href="/signup" className="w-full py-[13px] bg-bg-card border-[1.5px] border-border-default rounded-[13px] font-dm text-[14px] font-medium text-center cursor-pointer transition-all duration-150 hover:border-border-strong hover:shadow-[0_2px_8px_rgba(0,0,0,0.07)] flex items-center justify-center gap-[10px]" style={{ color: "#1C1A17" }}>
+          <Link href="/signup" className="w-full py-[13px] rounded-[13px] font-dm text-[14px] font-medium text-center cursor-pointer transition-all duration-150 hover:shadow-[0_2px_8px_rgba(0,0,0,0.07)] flex items-center justify-center gap-[10px]" style={{ color: "#1C1A17", background: "#FFFFFF", border: "1.5px solid #EAE7E1" }}>
             <GoogleIcon />
             Continue with Google
           </Link>
